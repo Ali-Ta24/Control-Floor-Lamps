@@ -17,6 +17,7 @@
                 <area id="map1" shape="poly" coords="858,336,856,101,974,102,975,255,1342,261,1342,380,1167,379,1166,791,585,792,585,337" href="#" class="group" data-maphilight='{"strokeColor":"e4f908","strokeWidth":15,"fillColor":"ecf494","fillOpacity":0.6}'>
                 <area id="map2" shape="rect" coords="999,100,1251,237" href="#" class="group" data-maphilight='{"strokeColor":"e4f908","strokeWidth":15,"fillColor":"ecf494","fillOpacity":0.6}'>
                 <area id="map3" shape="poly" coords="582,161,648,95,834,95,834,316,582,316" href="#" class="group" data-maphilight='{"strokeColor":"e4f908","strokeWidth":15,"fillColor":"ecf494","fillOpacity":0.6}'>
+                <area id="map4" shape="rect" coords="1176,392,1342,790" href="#" class="group" data-maphilight='{"strokeColor":"e4f908","strokeWidth":15,"fillColor":"ecf494","fillOpacity":0.6}'>
             </map>
         </div>
 
@@ -108,5 +109,30 @@
                         });
                     });
                     </script>
+                    <script>
+                        $(function() {
+                            $('.map').maphilight({
+                                fillColor: '008800'
+                            });
+                            // $('#hilightlink').mouseover(function(e) {
+                            //     $('#square2').mouseover();
+                            // }).mouseout(function(e) {
+                            //     $('#square2').mouseout();
+                            // }).click(function(e) { e.preventDefault(); });
+                            $('#map1link').click(function(e) {
+                                e.preventDefault();
+                                var data = $('#map4').data('maphilight') || {};
+                                data.neverOn = !data.neverOn;
+                                $('#map4').data('maphilight', data);
+                            });
+                            $('#map4,#map1link2').click(function(e) {
+                                e.preventDefault();
+                                var data = $('#map4').mouseout().data('maphilight') || {};
+                                data.alwaysOn = !data.alwaysOn;
+                                $('#map4').data('maphilight', data).trigger('alwaysOn.maphilight');
+                            });
+                        });
+                        </script>
+            
     </body>
 </html>
