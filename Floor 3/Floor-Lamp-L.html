@@ -11,24 +11,21 @@
     </head>
     <body>
         <div class="position-div" >
-            <img class="map cndition-img" src="Map-L-Final-floor3-Big.png" usemap="#map">
+            <img class="map cndition-img" src="Map-L-Final-floor3-Big copy.png" usemap="#map">
             <map name="map">
-                <area id="map1" shape="poly" coords="580,158,650,91,975,91,978,403,1159,403,1162,788,580,788" href="#" class="group" data-maphilight='{"strokeColor":"e4f908","strokeWidth":15,"fillColor":"ecf494","fillOpacity":0.6}'>
-                <area id="map2" shape="poly" coords="1167,389,1167,369,1337,369,1337,241,1259,241,1256,91,992,91,995,389" href="#" class="group" data-maphilight='{"strokeColor":"e4f908","strokeWidth":15,"fillColor":"ecf494","fillOpacity":0.6}'>
-                <area id="map3" shape="rect" coords="1184,386,1342,790" href="#" class="group" data-maphilight='{"strokeColor":"e4f908","strokeWidth":15,"fillColor":"ecf494","fillOpacity":0.6}'>
+                <area id="map1" class="group" href="#" coords="587,327,843,483" shape="rect" data-maphilight='{"strokeColor":"e4f908","strokeWidth":11,"fillColor":"ecf494","fillOpacity":0.6}'>
+                <area id="map2" class="group" href="#" coords="996,89,1253,236" shape="rect" data-maphilight='{"strokeColor":"e4f908","strokeWidth":11,"fillColor":"ecf494","fillOpacity":0.6}'>
+                <area id="map3" class="group" href="#" coords="585,780,844,494" shape="rect" data-maphilight='{"strokeColor":"e4f908","strokeWidth":11,"fillColor":"ecf494","fillOpacity":0.6}'>
+                <area id="map4" class="group" href="#" coords="857,90,974,482" shape="rect" data-maphilight='{"strokeColor":"e4f908","strokeWidth":11,"fillColor":"ecf494","fillOpacity":0.6}'>
+                <area id="map5" class="group" href="#" coords="849,494,1002,780" shape="rect" data-maphilight='{"strokeColor":"e4f908","strokeWidth":11,"fillColor":"ecf494","fillOpacity":0.6}'>
+                <area id="map6" class="group" href="#" coords="996,247,1163,386" shape="rect" data-maphilight='{"strokeColor":"e4f908","strokeWidth":11,"fillColor":"ecf494","fillOpacity":0.6}'>
+                <area id="map7" class="group" href="#" coords="585,155,649,89,841,89,843,314,583,313" shape="poly" data-maphilight='{"strokeColor":"e4f908","strokeWidth":11,"fillColor":"ecf494","fillOpacity":0.6}'>
+                <area id="map8" class="group" href="#" coords="1183,469,1341,785" shape="rect" data-maphilight='{"strokeColor":"e4f908","strokeWidth":11,"fillColor":"ecf494","fillOpacity":0.6}'>
+                <area id="map9" class="group" href="#" coords="1016,494,1166,780" shape="rect" data-maphilight='{"strokeColor":"e4f908","strokeWidth":11,"fillColor":"ecf494","fillOpacity":0.6}'>
+                <area id="map10" class="group" href="#" coords="1180,247,1336,248,1333,365,1280,365,1280,462,1180,461" shape="poly" data-maphilight='{"strokeColor":"e4f908","strokeWidth":11,"fillColor":"ecf494","fillOpacity":0.6}'>
                 
             </map>
         </div>
-
-        <!-- create line round map -->
-        <!-- <script>
-            var areas = document.getElementsByTagName( 'area' );
-            for( var index = 0; index < areas.length; index++ ) {    
-                areas[index].addEventListener( 'mouseover', function () {this.focus();}, false );
-                areas[index].addEventListener( 'mouseout', function () {this.blur();}, false );
-            };
-        </script> 
-        <script src="js/jquery.min.js"></script> -->
 
         <script type="text/javascript" src="js/imageMapResizer.min.js"></script>
         <script type="text/javascript">
@@ -58,55 +55,178 @@
                     $('#map1').data('maphilight', data).trigger('alwaysOn.maphilight');
                 });
             });
-            </script>
+        </script>
 
-            <script>
-                $(function() {
-                    $('.map').maphilight({
-                        fillColor: '008800'
-                    });
-                    // $('#hilightlink').mouseover(function(e) {
-                    //     $('#square2').mouseover();
-                    // }).mouseout(function(e) {
-                    //     $('#square2').mouseout();
-                    // }).click(function(e) { e.preventDefault(); });
-                    $('#map2link').click(function(e) {
-                        e.preventDefault();
-                        var data = $('#map2').data('maphilight') || {};
-                        data.neverOn = !data.neverOn;
-                        $('#map2').data('maphilight', data);
-                    });
-                    $('#map2,#map2link2').click(function(e) {
-                        e.preventDefault();
-                        var data = $('#map2').mouseout().data('maphilight') || {};
-                        data.alwaysOn = !data.alwaysOn;
-                        $('#map2').data('maphilight', data).trigger('alwaysOn.maphilight');
-                    });
+        <script>
+            $(function() {
+                $('.map').maphilight({
+                    fillColor: '008800'
                 });
-                </script>
-                <script>
-                    $(function() {
-                        $('.map').maphilight({
-                            fillColor: '008800'
-                        });
-                        // $('#hilightlink').mouseover(function(e) {
-                        //     $('#square2').mouseover();
-                        // }).mouseout(function(e) {
-                        //     $('#square2').mouseout();
-                        // }).click(function(e) { e.preventDefault(); });
-                        $('#map3link').click(function(e) {
-                            e.preventDefault();
-                            var data = $('#map3').data('maphilight') || {};
-                            data.neverOn = !data.neverOn;
-                            $('#map3').data('maphilight', data);
-                        });
-                        $('#map3,#map3link2').click(function(e) {
-                            e.preventDefault();
-                            var data = $('#map3').mouseout().data('maphilight') || {};
-                            data.alwaysOn = !data.alwaysOn;
-                            $('#map3').data('maphilight', data).trigger('alwaysOn.maphilight');
-                        });
-                    });
-                    </script>
+                $('#map2link').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map2').data('maphilight') || {};
+                    data.neverOn = !data.neverOn;
+                    $('#map2').data('maphilight', data);
+                });
+                $('#map2,#map2link2').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map2').mouseout().data('maphilight') || {};
+                    data.alwaysOn = !data.alwaysOn;
+                    $('#map2').data('maphilight', data).trigger('alwaysOn.maphilight');
+                });
+            });
+        </script>
+        <script>
+            $(function() {
+                $('.map').maphilight({
+                    fillColor: '008800'
+                });
+                $('#map3link').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map3').data('maphilight') || {};
+                    data.neverOn = !data.neverOn;
+                    $('#map3').data('maphilight', data);
+                });
+                $('#map3,#map3link2').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map3').mouseout().data('maphilight') || {};
+                    data.alwaysOn = !data.alwaysOn;
+                    $('#map3').data('maphilight', data).trigger('alwaysOn.maphilight');
+                });
+            });
+        </script>
+        <script>
+            $(function() {
+                $('.map').maphilight({
+                    fillColor: '008800'
+                });
+                $('#map4link').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map4').data('maphilight') || {};
+                    data.neverOn = !data.neverOn;
+                    $('#map4').data('maphilight', data);
+                });
+                $('#map4,#map1link2').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map4').mouseout().data('maphilight') || {};
+                    data.alwaysOn = !data.alwaysOn;
+                    $('#map4').data('maphilight', data).trigger('alwaysOn.maphilight');
+                });
+            });
+        </script>
+        <script>
+            $(function() {
+                $('.map').maphilight({
+                    fillColor: '008800'
+                });
+                $('#map5link').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map5').data('maphilight') || {};
+                    data.neverOn = !data.neverOn;
+                    $('#map5').data('maphilight', data);
+                });
+                $('#map5,#map1link2').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map5').mouseout().data('maphilight') || {};
+                    data.alwaysOn = !data.alwaysOn;
+                    $('#map5').data('maphilight', data).trigger('alwaysOn.maphilight');
+                });
+            });
+        </script>
+        <script>
+            $(function() {
+                $('.map').maphilight({
+                    fillColor: '008800'
+                });
+                $('#map6link').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map6').data('maphilight') || {};
+                    data.neverOn = !data.neverOn;
+                    $('#map6').data('maphilight', data);
+                });
+                $('#map6,#map1link2').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map6').mouseout().data('maphilight') || {};
+                    data.alwaysOn = !data.alwaysOn;
+                    $('#map6').data('maphilight', data).trigger('alwaysOn.maphilight');
+                });
+            });
+        </script>
+        <script>
+            $(function() {
+                $('.map').maphilight({
+                    fillColor: '008800'
+                });
+                $('#map7link').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map7').data('maphilight') || {};
+                    data.neverOn = !data.neverOn;
+                    $('#map7').data('maphilight', data);
+                });
+                $('#map7,#map1link2').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map7').mouseout().data('maphilight') || {};
+                    data.alwaysOn = !data.alwaysOn;
+                    $('#map7').data('maphilight', data).trigger('alwaysOn.maphilight');
+                });
+            });
+        </script>
+        <script>
+            $(function() {
+                $('.map').maphilight({
+                    fillColor: '008800'
+                });
+                $('#map8link').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map8').data('maphilight') || {};
+                    data.neverOn = !data.neverOn;
+                    $('#map8').data('maphilight', data);
+                });
+                $('#map8,#map1link2').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map8').mouseout().data('maphilight') || {};
+                    data.alwaysOn = !data.alwaysOn;
+                    $('#map8').data('maphilight', data).trigger('alwaysOn.maphilight');
+                });
+            });
+        </script>
+        <script>
+            $(function() {
+                $('.map').maphilight({
+                    fillColor: '008800'
+                });
+                $('#map9link').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map9').data('maphilight') || {};
+                    data.neverOn = !data.neverOn;
+                    $('#map9').data('maphilight', data);
+                });
+                $('#map9,#map1link2').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map9').mouseout().data('maphilight') || {};
+                    data.alwaysOn = !data.alwaysOn;
+                    $('#map9').data('maphilight', data).trigger('alwaysOn.maphilight');
+                });
+            });
+        </script>
+        <script>
+            $(function() {
+                $('.map').maphilight({
+                    fillColor: '008800'
+                });
+                $('#map10link').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map10').data('maphilight') || {};
+                    data.neverOn = !data.neverOn;
+                    $('#map10').data('maphilight', data);
+                });
+                $('#map10,#map1link2').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map10').mouseout().data('maphilight') || {};
+                    data.alwaysOn = !data.alwaysOn;
+                    $('#map10').data('maphilight', data).trigger('alwaysOn.maphilight');
+                });
+            });
+        </script>
     </body>
 </html>
