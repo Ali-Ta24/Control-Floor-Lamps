@@ -14,22 +14,23 @@
         <div class="position-div" >
             <img class="map cndition-img" src="Map-L-Final-floor5-Big.png" usemap="#map">
             <map name="map">
-                <area id="map1" shape="poly" coords="858,336,856,101,974,102,975,255,1342,261,1342,380,1167,379,1166,791,585,792,585,337" href="#" class="group" data-maphilight='{"strokeColor":"e4f908","strokeWidth":15,"fillColor":"ecf494","fillOpacity":0.6}'>
-                <area id="map2" shape="rect" coords="999,100,1251,237" href="#" class="group" data-maphilight='{"strokeColor":"e4f908","strokeWidth":15,"fillColor":"ecf494","fillOpacity":0.6}'>
-                <area id="map3" shape="poly" coords="582,161,648,95,834,95,834,316,582,316" href="#" class="group" data-maphilight='{"strokeColor":"e4f908","strokeWidth":15,"fillColor":"ecf494","fillOpacity":0.6}'>
-                <area id="map4" shape="rect" coords="1176,392,1342,790" href="#" class="group" data-maphilight='{"strokeColor":"e4f908","strokeWidth":15,"fillColor":"ecf494","fillOpacity":0.6}'>
+                <area id="map1" class="group" href="#" coords="589,333,708,541" shape="rect" data-maphilight='{"strokeColor":"e4f908","strokeWidth":15,"fillColor":"ecf494","fillOpacity":0.6}'>
+                <area id="map2" class="group" href="#" coords="721,333,839,540" shape="rect" data-maphilight='{"strokeColor":"e4f908","strokeWidth":15,"fillColor":"ecf494","fillOpacity":0.6}'>
+                <area id="map3" class="group" href="#" coords="591,557,708,788" shape="rect" data-maphilight='{"strokeColor":"e4f908","strokeWidth":15,"fillColor":"ecf494","fillOpacity":0.6}'>
+                <area id="map4" class="group" href="#" coords="723,556,840,789" shape="rect" data-maphilight='{"strokeColor":"e4f908","strokeWidth":15,"fillColor":"ecf494","fillOpacity":0.6}'>
+                <area id="map5" class="group" href="#" coords="859,510,1159,788" shape="rect" data-maphilight='{"strokeColor":"e4f908","strokeWidth":15,"fillColor":"ecf494","fillOpacity":0.6}'>
+                <area id="map6" class="group" href="#" coords="1237,632,1324,690" shape="rect" data-maphilight='{"strokeColor":"e4f908","strokeWidth":15,"fillColor":"ecf494","fillOpacity":0.6}'>
+                <area id="map7" class="group" href="#" coords="859,338,1162,490" shape="rect" data-maphilight='{"strokeColor":"e4f908","strokeWidth":15,"fillColor":"ecf494","fillOpacity":0.6}'>
+                <area id="map8" class="group" href="#" coords="653,167,789,278" shape="rect" data-maphilight='{"strokeColor":"e4f908","strokeWidth":15,"fillColor":"ecf494","fillOpacity":0.6}'>
+                <area id="map9" class="group" href="#" coords="1033,133,1207,214" shape="rect" data-maphilight='{"strokeColor":"e4f908","strokeWidth":15,"fillColor":"ecf494","fillOpacity":0.6}'>
+                <area id="map10" class="group" href="#" coords="859,105,972,105,976,262,1161,262,1161,324,859,322" shape="poly" data-maphilight='{"strokeColor":"e4f908","strokeWidth":15,"fillColor":"ecf494","fillOpacity":0.6}'>
+                <area id="map11" class="group" href="#" coords="1184,261,1362,263,1362,340,1333,340,1331,370,1184,370" shape="poly" data-maphilight='{"strokeColor":"e4f908","strokeWidth":15,"fillColor":"ecf494","fillOpacity":0.6}'>
+                <area id="map12" class="group" href="#" coords="1184,398,1269,398,1267,610,1214,610,1214,657,1184,657" shape="poly" data-maphilight='{"strokeColor":"e4f908","strokeWidth":15,"fillColor":"ecf494","fillOpacity":0.6}'>
+                <area id="map13" class="group" href="#" coords="1182,678,1216,678,1214,712,1326,712,1326,789,1180,789" shape="poly" data-maphilight='{"strokeColor":"e4f908","strokeWidth":15,"fillColor":"ecf494","fillOpacity":0.6}'>
+                <area id="map14" class="group" href="#" coords="592,314,592,178,647,122,648,163,648,283,795,283,795,159,650,160,650,112,833,110,835,313,647,315" shape="poly" data-maphilight='{"strokeColor":"e4f908","strokeWidth":15,"fillColor":"ecf494","fillOpacity":0.6}'>
+                <area id="map15" class="group" href="#" coords="1206,215,1210,131,1029,128,1028,213,1029,238,996,240,996,107,1244,107,1244,240,1029,238,1030,215" shape="poly" data-maphilight='{"strokeColor":"e4f908","strokeWidth":15,"fillColor":"ecf494","fillOpacity":0.6}'>
             </map>
         </div>
-
-        <!-- create line round map -->
-        <!-- <script>
-            var areas = document.getElementsByTagName( 'area' );
-            for( var index = 0; index < areas.length; index++ ) {    
-                areas[index].addEventListener( 'mouseover', function () {this.focus();}, false );
-                areas[index].addEventListener( 'mouseout', function () {this.blur();}, false );
-            };
-        </script> 
-        <script src="js/jquery.min.js"></script> -->
 
         <script type="text/javascript" src="js/imageMapResizer.min.js"></script>
         <script type="text/javascript">
@@ -59,80 +60,273 @@
                     $('#map1').data('maphilight', data).trigger('alwaysOn.maphilight');
                 });
             });
-            </script>
+        </script>
 
-            <script>
-                $(function() {
-                    $('.map').maphilight({
-                        fillColor: '008800'
-                    });
-                    // $('#hilightlink').mouseover(function(e) {
-                    //     $('#square2').mouseover();
-                    // }).mouseout(function(e) {
-                    //     $('#square2').mouseout();
-                    // }).click(function(e) { e.preventDefault(); });
-                    $('#map2link').click(function(e) {
-                        e.preventDefault();
-                        var data = $('#map2').data('maphilight') || {};
-                        data.neverOn = !data.neverOn;
-                        $('#map2').data('maphilight', data);
-                    });
-                    $('#map2,#map2link2').click(function(e) {
-                        e.preventDefault();
-                        var data = $('#map2').mouseout().data('maphilight') || {};
-                        data.alwaysOn = !data.alwaysOn;
-                        $('#map2').data('maphilight', data).trigger('alwaysOn.maphilight');
-                    });
+        <script>
+            $(function() {
+                $('.map').maphilight({
+                    fillColor: '008800'
                 });
-                </script>
-                <script>
-                    $(function() {
-                        $('.map').maphilight({
-                            fillColor: '008800'
-                        });
-                        // $('#hilightlink').mouseover(function(e) {
-                        //     $('#square2').mouseover();
-                        // }).mouseout(function(e) {
-                        //     $('#square2').mouseout();
-                        // }).click(function(e) { e.preventDefault(); });
-                        $('#map3link').click(function(e) {
-                            e.preventDefault();
-                            var data = $('#map3').data('maphilight') || {};
-                            data.neverOn = !data.neverOn;
-                            $('#map3').data('maphilight', data);
-                        });
-                        $('#map3,#map3link2').click(function(e) {
-                            e.preventDefault();
-                            var data = $('#map3').mouseout().data('maphilight') || {};
-                            data.alwaysOn = !data.alwaysOn;
-                            $('#map3').data('maphilight', data).trigger('alwaysOn.maphilight');
-                        });
-                    });
-                    </script>
-                    <script>
-                        $(function() {
-                            $('.map').maphilight({
-                                fillColor: '008800'
-                            });
-                            // $('#hilightlink').mouseover(function(e) {
-                            //     $('#square2').mouseover();
-                            // }).mouseout(function(e) {
-                            //     $('#square2').mouseout();
-                            // }).click(function(e) { e.preventDefault(); });
-                            $('#map1link').click(function(e) {
-                                e.preventDefault();
-                                var data = $('#map4').data('maphilight') || {};
-                                data.neverOn = !data.neverOn;
-                                $('#map4').data('maphilight', data);
-                            });
-                            $('#map4,#map1link2').click(function(e) {
-                                e.preventDefault();
-                                var data = $('#map4').mouseout().data('maphilight') || {};
-                                data.alwaysOn = !data.alwaysOn;
-                                $('#map4').data('maphilight', data).trigger('alwaysOn.maphilight');
-                            });
-                        });
-                        </script>
-            
+                $('#map2link').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map2').data('maphilight') || {};
+                    data.neverOn = !data.neverOn;
+                    $('#map2').data('maphilight', data);
+                });
+                $('#map2,#map2link2').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map2').mouseout().data('maphilight') || {};
+                    data.alwaysOn = !data.alwaysOn;
+                    $('#map2').data('maphilight', data).trigger('alwaysOn.maphilight');
+                });
+            });
+        </script>
+        <script>
+            $(function() {
+                $('.map').maphilight({
+                    fillColor: '008800'
+                });
+                $('#map3link').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map3').data('maphilight') || {};
+                    data.neverOn = !data.neverOn;
+                    $('#map3').data('maphilight', data);
+                });
+                $('#map3,#map3link2').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map3').mouseout().data('maphilight') || {};
+                    data.alwaysOn = !data.alwaysOn;
+                    $('#map3').data('maphilight', data).trigger('alwaysOn.maphilight');
+                });
+            });
+        </script>
+        <script>
+            $(function() {
+                $('.map').maphilight({
+                    fillColor: '008800'
+                });
+                $('#map4link').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map4').data('maphilight') || {};
+                    data.neverOn = !data.neverOn;
+                    $('#map4').data('maphilight', data);
+                });
+                $('#map4,#map1link2').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map4').mouseout().data('maphilight') || {};
+                    data.alwaysOn = !data.alwaysOn;
+                    $('#map4').data('maphilight', data).trigger('alwaysOn.maphilight');
+                });
+            });
+        </script>
+        <script>
+            $(function() {
+                $('.map').maphilight({
+                    fillColor: '008800'
+                });
+                $('#map5link').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map5').data('maphilight') || {};
+                    data.neverOn = !data.neverOn;
+                    $('#map5').data('maphilight', data);
+                });
+                $('#map5,#map1link2').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map5').mouseout().data('maphilight') || {};
+                    data.alwaysOn = !data.alwaysOn;
+                    $('#map5').data('maphilight', data).trigger('alwaysOn.maphilight');
+                });
+            });
+        </script>
+        <script>
+            $(function() {
+                $('.map').maphilight({
+                    fillColor: '008800'
+                });
+                $('#map6link').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map6').data('maphilight') || {};
+                    data.neverOn = !data.neverOn;
+                    $('#map6').data('maphilight', data);
+                });
+                $('#map6,#map1link2').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map6').mouseout().data('maphilight') || {};
+                    data.alwaysOn = !data.alwaysOn;
+                    $('#map6').data('maphilight', data).trigger('alwaysOn.maphilight');
+                });
+            });
+        </script>
+        <script>
+            $(function() {
+                $('.map').maphilight({
+                    fillColor: '008800'
+                });
+                $('#map7link').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map7').data('maphilight') || {};
+                    data.neverOn = !data.neverOn;
+                    $('#map7').data('maphilight', data);
+                });
+                $('#map7,#map1link2').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map7').mouseout().data('maphilight') || {};
+                    data.alwaysOn = !data.alwaysOn;
+                    $('#map7').data('maphilight', data).trigger('alwaysOn.maphilight');
+                });
+            });
+        </script>
+        <script>
+            $(function() {
+                $('.map').maphilight({
+                    fillColor: '008800'
+                });
+                $('#map8link').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map8').data('maphilight') || {};
+                    data.neverOn = !data.neverOn;
+                    $('#map8').data('maphilight', data);
+                });
+                $('#map8,#map1link2').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map8').mouseout().data('maphilight') || {};
+                    data.alwaysOn = !data.alwaysOn;
+                    $('#map8').data('maphilight', data).trigger('alwaysOn.maphilight');
+                });
+            });
+        </script>
+        <script>
+            $(function() {
+                $('.map').maphilight({
+                    fillColor: '008800'
+                });
+                $('#map9link').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map9').data('maphilight') || {};
+                    data.neverOn = !data.neverOn;
+                    $('#map9').data('maphilight', data);
+                });
+                $('#map9,#map1link2').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map9').mouseout().data('maphilight') || {};
+                    data.alwaysOn = !data.alwaysOn;
+                    $('#map9').data('maphilight', data).trigger('alwaysOn.maphilight');
+                });
+            });
+        </script>
+        <script>
+            $(function() {
+                $('.map').maphilight({
+                    fillColor: '008800'
+                });
+                $('#map10link').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map10').data('maphilight') || {};
+                    data.neverOn = !data.neverOn;
+                    $('#map10').data('maphilight', data);
+                });
+                $('#map10,#map1link2').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map10').mouseout().data('maphilight') || {};
+                    data.alwaysOn = !data.alwaysOn;
+                    $('#map10').data('maphilight', data).trigger('alwaysOn.maphilight');
+                });
+            });
+        </script>
+        <script>
+            $(function() {
+                $('.map').maphilight({
+                    fillColor: '008800'
+                });
+                $('#map11link').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map11').data('maphilight') || {};
+                    data.neverOn = !data.neverOn;
+                    $('#map11').data('maphilight', data);
+                });
+                $('#map11,#map1link2').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map11').mouseout().data('maphilight') || {};
+                    data.alwaysOn = !data.alwaysOn;
+                    $('#map11').data('maphilight', data).trigger('alwaysOn.maphilight');
+                });
+            });
+        </script>
+        <script>
+            $(function() {
+                $('.map').maphilight({
+                    fillColor: '008800'
+                });
+                $('#map12link').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map12').data('maphilight') || {};
+                    data.neverOn = !data.neverOn;
+                    $('#map12').data('maphilight', data);
+                });
+                $('#map12,#map1link2').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map12').mouseout().data('maphilight') || {};
+                    data.alwaysOn = !data.alwaysOn;
+                    $('#map12').data('maphilight', data).trigger('alwaysOn.maphilight');
+                });
+            });
+        </script>
+        <script>
+            $(function() {
+                $('.map').maphilight({
+                    fillColor: '008800'
+                });
+                $('#map13link').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map13').data('maphilight') || {};
+                    data.neverOn = !data.neverOn;
+                    $('#map13').data('maphilight', data);
+                });
+                $('#map13,#map1link2').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map13').mouseout().data('maphilight') || {};
+                    data.alwaysOn = !data.alwaysOn;
+                    $('#map13').data('maphilight', data).trigger('alwaysOn.maphilight');
+                });
+            });
+        </script>
+        <script>
+            $(function() {
+                $('.map').maphilight({
+                    fillColor: '008800'
+                });
+                $('#map14link').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map14').data('maphilight') || {};
+                    data.neverOn = !data.neverOn;
+                    $('#map14').data('maphilight', data);
+                });
+                $('#map14,#map1link2').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map14').mouseout().data('maphilight') || {};
+                    data.alwaysOn = !data.alwaysOn;
+                    $('#map14').data('maphilight', data).trigger('alwaysOn.maphilight');
+                });
+            });
+        </script>
+        <script>
+            $(function() {
+                $('.map').maphilight({
+                    fillColor: '008800'
+                });
+                $('#map15link').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map15').data('maphilight') || {};
+                    data.neverOn = !data.neverOn;
+                    $('#map15').data('maphilight', data);
+                });
+                $('#map15,#map1link2').click(function(e) {
+                    e.preventDefault();
+                    var data = $('#map15').mouseout().data('maphilight') || {};
+                    data.alwaysOn = !data.alwaysOn;
+                    $('#map15').data('maphilight', data).trigger('alwaysOn.maphilight');
+                });
+            });
+        </script>
     </body>
 </html>
